@@ -1,0 +1,103 @@
+Microsoft Windows [Version 10.0.19043.1766]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\Git\Assigment 2>git init
+Initialized empty Git repository in D:/Git/Assigment 2/.git/
+
+D:\Git\Assigment 2>type nul > a.txt
+
+D:\Git\Assigment 2>type nul > b.txt
+
+D:\Git\Assigment 2>git add .
+
+D:\Git\Assigment 2>git commit -m "Created two files"
+[master (root-commit) 1f7f472] Created two files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+ create mode 100644 b.txt
+
+D:\Git\Assigment 2>git log --oneliner
+fatal: unrecognized argument: --oneliner
+
+D:\Git\Assigment 2>git log
+commit 1f7f4727dda37e9a9ddca5464ab1e351fdb25570 (HEAD -> master)
+Author: Vishal Das <vdas53073@gmail.com>
+Date:   Tue Jul 26 22:46:41 2022 +0530
+
+    Created two files
+
+D:\Git\Assigment 2>git log --oneline
+1f7f472 (HEAD -> master) Created two files
+
+D:\Git\Assigment 2>git rm a.txt
+rm 'a.txt'
+
+D:\Git\Assigment 2>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    a.txt
+
+
+D:\Git\Assigment 2>git commit -m "a.txt deleted"
+[master 99c66de] a.txt deleted
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 a.txt
+
+D:\Git\Assigment 2>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\Git\Assigment 2>git log --oneline
+99c66de (HEAD -> master) a.txt deleted
+1f7f472 Created two files
+
+D:\Git\Assigment 2>git checkout HEAD~1 a.txt
+Updated 1 path from 2bdf04a
+
+D:\Git\Assigment 2>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   a.txt
+
+
+D:\Git\Assigment 2>git commit -m "a.txt added again"
+[master e946709] a.txt added again
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+
+D:\Git\Assigment 2>git log
+commit e9467093b3eef1765ad63c7bf909774cd0e05bd8 (HEAD -> master)
+Author: Vishal Das <vdas53073@gmail.com>
+Date:   Tue Jul 26 22:51:28 2022 +0530
+
+    a.txt added again
+
+commit 99c66de0bce299a057c3c42a4177cc04cf446fed
+Author: Vishal Das <vdas53073@gmail.com>
+Date:   Tue Jul 26 22:48:14 2022 +0530
+
+    a.txt deleted
+
+commit 1f7f4727dda37e9a9ddca5464ab1e351fdb25570
+Author: Vishal Das <vdas53073@gmail.com>
+Date:   Tue Jul 26 22:46:41 2022 +0530
+
+    Created two files
+
+D:\Git\Assigment 2>git rm --cached b.txt
+rm 'b.txt'
+
+D:\Git\Assigment 2>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    b.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b.txt
+
+
+D:\Git\Assigment 2>
